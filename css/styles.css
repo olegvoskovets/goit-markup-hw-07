@@ -157,12 +157,64 @@ button {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url("../../images/heroimg.jpg");
+    url("../../images/hero-mobale.jpg");
   background-size: cover;
   background-position: center;
-
-  /* */
 }
+
+@media screen and (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../../images/hero-mobale@2x.jpg");
+  }
+}
+@media screen and (min-width: 480px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../../images/hero-tablet.jpg");
+  }
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url("../../images/hero-tablet@2x.jpg");
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../../images/desctop.jpg");
+  }
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url("../../images/desctop@2x.jpg");
+    }
+  }
+}
+
 .hero-title {
   font-weight: 700;
   font-size: 56px;
@@ -358,15 +410,13 @@ button {
   color: var(--background-color);
   margin-bottom: 12px;
 }
-.footer-left {
-  margin-right: 120px;
-}
+
 .footer-text {
   width: 264px;
   color: var(--border-solid);
 }
 .footer-right {
-  padding-right: 80px;
+  margin-right: 80px;
 }
 
 .footer-right-text {
@@ -399,7 +449,7 @@ button {
   font-size: 16px;
   line-height: 1.5;
   color: #ffffff;
-  padding-bottom: 16px;
+  margin-bottom: 16px;
 }
 .footer-flex {
   flex-direction: row;
@@ -933,10 +983,78 @@ button {
     margin-top: 72px;
     margin-left: 16px;
   }
+  .footer {
+    padding: 96px 0;
+  }
+  .footer > .container {
+    justify-content: center;
+    gap: 72px;
+  }
+  .footer-left {
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-bottom: 72px; */
+  }
+  .footer-flex {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .footer-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0;
+  }
+  .footer-logo {
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16px;
+  }
+  .subscribe {
+    display: flex;
+    flex-direction: column;
+  }
+  .subscribe-text {
+    text-align: center;
+  }
+  .footer-input {
+    margin-right: 0;
+    width: 398px;
+  }
+  .filters-list {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .cards-list {
+    margin-top: 0;
+    margin-left: 0;
+    gap: 48px;
+  }
+  .card-list-item {
+    margin-left: 0;
+    margin-top: 0;
+  }
+  .img-relative > img {
+    width: 398px;
+  }
+  .main {
+    padding: 48px 0;
+  }
+  .filter-btn > button {
+    padding: 8px 16px;
+  }
+  .filters {
+    margin-bottom: 48px;
+  }
 }
 @media screen and (min-width: 768px) {
   .container {
     width: 736px;
+    padding-left: 0;
+    padding-right: 0;
   }
   .contact {
     display: block;
@@ -965,7 +1083,7 @@ button {
     margin-left: -24px;
   }
   .factors-list-item {
-    width: 341px;
+    width: 356px;
     margin-left: 24px;
     margin-top: 72px;
   }
@@ -979,7 +1097,7 @@ button {
     margin-left: 24px;
     margin-top: 64px;
   }
-  
+
   .customers-list {
     margin-top: -72px;
     margin-left: -24px;
@@ -989,6 +1107,23 @@ button {
   .customer-list-item {
     margin-top: 72px;
     margin-left: 24px;
+  }
+  .footer-left {
+    margin-right: 24px;
+  }
+  .footer > .container {
+    padding-left: 108px;
+  }
+  .img-relative > img {
+    width: 356px;
+  }
+  .main {
+    padding-top: 64px;
+    padding-bottom: 105px;
+  }
+
+  .filters {
+    margin-bottom: 55px;
   }
 }
 
@@ -1023,14 +1158,19 @@ button {
     padding-top: 96px;
     padding-bottom: 96px;
   }
-   .customers-list {
+  .customers-list {
     flex-wrap: wrap;
-      justify-content: center;
+    justify-content: center;
+  }
+  .container {
+    flex-wrap: wrap;
   }
 }
 @media screen and (min-width: 1200px) {
   .container {
     width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
   .contact {
     position: static;
@@ -1060,9 +1200,26 @@ button {
     margin-top: 0;
     margin-left: 0;
     gap: 24px;
-}
-.customer-list-item {
+  }
+  .customer-list-item {
     margin-top: 0;
     margin-left: 0;
-}
+  }
+  .footer > .container {
+    padding-left: 15px;
+  }
+  .footer-left {
+    margin-right: 120px;
+  }
+  .img-relative > img {
+    width: 360px;
+  }
+  .main {
+    padding-top: 100px;
+    padding-bottom: 120px;
+  }
+
+  .filters {
+    margin-bottom: 72px;
+  }
 }
