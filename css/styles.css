@@ -1037,7 +1037,7 @@ button {
     margin-left: 0;
     margin-top: 0;
   }
-  .img-relative > img {
+  .img-relative >picture> img {
     width: 398px;
   }
   .main {
@@ -1114,7 +1114,7 @@ button {
   .footer > .container {
     padding-left: 108px;
   }
-  .img-relative > img {
+  .img-relative >picture> img {
     width: 356px;
   }
   .main {
@@ -1211,7 +1211,7 @@ button {
   .footer-left {
     margin-right: 120px;
   }
-  .img-relative > img {
+  .img-relative > picture>img {
     width: 360px;
   }
   .main {
