@@ -89,6 +89,7 @@ button {
 .logo span {
   color: var(--iris-color);
 }
+
 .menu-relative {
   position: relative;
 }
@@ -460,7 +461,6 @@ button {
   background-color: #2e2f42;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
-  margin-right: 24px;
 }
 .footer-input:focus {
   outline: none;
@@ -547,9 +547,9 @@ button {
   margin-top: 48px;
 }
 .card-item-handler {
-  width: 100%;
+  /* width: 100%;
   height: 100%;
-  display: block;
+  display: block; */
   text-decoration: none;
 }
 .card-item-handler:hover,
@@ -792,9 +792,13 @@ button {
   top: 0;
   left: 0;
   flex-direction: column;
-  width: 100%;
-  height: 796px;
+  width: 100vw;
+  height: 100vh;
   background-color: #fff;
+  padding-top: 80px;
+  padding-left: 40px;
+  padding-bottom: 40px;
+  justify-content: space-between;
   z-index: 500;
   transition: transform 300ms ease-out, opacity 300ms ease-out;
 }
@@ -810,9 +814,6 @@ button {
 .menu-modal .menu-list {
   flex-direction: column;
 }
-/* .menu-modal .address-menu {
-  flex-direction: column;
-} */
 
 .close-modal-menu {
   width: 24px;
@@ -837,11 +838,9 @@ button {
   opacity: 1;
 }
 .contact-menu-modal {
-  padding-bottom: 48px;
+  margin-bottom: 48px;
 }
-.social-menu {
-  padding-left: 40px;
-}
+
 .socisl-menu-list {
   gap: 56px;
 }
@@ -853,7 +852,8 @@ button {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: #f4f4fd;
+  background-color: var(--iris-color);
+  fill: #f4f4fd;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -862,7 +862,7 @@ button {
 
 .social-menu-item-icon:hover,
 .social-menu-item-icon:focus {
-  background-color: var(--iris-color);
+  background-color: var(--active-color);
 }
 /*================== медіа ====================*/
 @media screen and (max-width: 479px) {
@@ -875,12 +875,12 @@ button {
   .moving-icon {
     display: block;
   }
-  .menu-list {
+  /* .menu-list {
     padding-top: 80px;
     padding-left: 40px;
     padding-bottom: 284px;
     gap: 40px;
-  }
+  } */
   .menu-item,
   .contact-item {
     font-weight: 700;
@@ -893,11 +893,18 @@ button {
     line-height: 1.2;
   }
   .address-menu {
-    padding-left: 40px;
+    /* padding-left: 40px; */
     flex-direction: column-reverse;
   }
   .item-link::after {
     display: none;
+  }
+  .modal {
+    width: 90vw;
+    height: 90vh;
+  }
+  .footer-input {
+    width: 90vw;
   }
 }
 @media screen and (min-width: 480px) {
@@ -918,13 +925,10 @@ button {
 }
 
 @media screen and (max-width: 767px) {
-  .menu-modal {
+  /* .menu-modal {
     display: flex;
-  }
+  } */
   .menu-list {
-    padding-top: 80px;
-    padding-left: 40px;
-    padding-bottom: 284px;
     gap: 40px;
   }
   .menu-item,
@@ -939,7 +943,6 @@ button {
     line-height: 1.2;
   }
   .address-menu {
-    padding-left: 40px;
     flex-direction: column-reverse;
   }
   .item-link::after {
@@ -948,7 +951,6 @@ button {
   .hero {
     max-width: 767px;
     height: 432px;
-    padding-top: 112px;
   }
   .hero-title {
     font-size: 36px;
@@ -1020,10 +1022,10 @@ button {
   .subscribe-text {
     text-align: center;
   }
-  .footer-input {
+  /* .footer-input {
     margin-right: 0;
     width: 398px;
-  }
+  } */
   .filters-list {
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -1036,8 +1038,10 @@ button {
   .card-list-item {
     margin-left: 0;
     margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
-  .img-relative >picture> img {
+  .img-relative > picture > img {
     width: 398px;
   }
   .main {
@@ -1110,11 +1114,15 @@ button {
   }
   .footer-left {
     margin-right: 24px;
+    margin-bottom: 72px;
   }
   .footer > .container {
     padding-left: 108px;
   }
-  .img-relative >picture> img {
+  .footer-input {
+    margin-right: 24px;
+  }
+  .img-relative > picture > img {
     width: 356px;
   }
   .main {
@@ -1165,6 +1173,10 @@ button {
   .container {
     flex-wrap: wrap;
   }
+  .hero {
+    padding-top: 112px;
+    padding-bottom: 112px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .container {
@@ -1210,8 +1222,9 @@ button {
   }
   .footer-left {
     margin-right: 120px;
+    margin-bottom: 0;
   }
-  .img-relative > picture>img {
+  .img-relative > picture > img {
     width: 360px;
   }
   .main {
@@ -1221,5 +1234,16 @@ button {
 
   .filters {
     margin-bottom: 72px;
+  }
+  .cards-list {
+    /* flex-wrap: wrap; */
+    margin-top: -48px;
+    margin-left: -24px;
+  }
+}
+
+@media screen and (max-height: 584px) {
+  .modal {
+    overflow-y: scroll;
   }
 }
