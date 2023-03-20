@@ -591,7 +591,6 @@ button {
 .card-title {
   margin-bottom: 8px;
 }
-
 .backdrop {
   position: fixed;
   z-index: 100;
@@ -608,11 +607,11 @@ button {
   visibility: hidden;
   pointer-events: none;
 }
-/* .menu-modal.is-hidden {
+.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-} */
+}
 .modal {
   position: absolute;
   width: 408px;
