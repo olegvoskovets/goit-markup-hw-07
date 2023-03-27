@@ -152,6 +152,9 @@ button {
   opacity: 1;
 }
 
+.item-link-active {
+  color: var(--active-color);
+}
 .contact-link {
   font-style: normal;
   letter-spacing: 0.02em;
